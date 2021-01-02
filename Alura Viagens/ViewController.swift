@@ -43,9 +43,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.labelPreco.text = viagemAtual.preco
         cell.imagemViagem.image = UIImage(named: viagemAtual.caminhoDaImagem) // inserir imagem
         
-        
-        
-        cell.textLabel?.text = viagemAtual.titulo
+    
         return cell
     }
     
