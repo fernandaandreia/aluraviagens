@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource{
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     
     // MARK : IBOutlets
@@ -15,9 +15,13 @@ class ViewController: UIViewController, UITableViewDataSource{
     @IBOutlet weak var viewHoteis: UIView!
     @IBOutlet weak var viewPacotes: UIView!
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabelaViagens.dataSource = self
+        self.tabelaViagens.delegate = self 
         self.viewPacotes.layer.cornerRadius = 10
         self.viewHoteis.layer.cornerRadius = 10
         
@@ -31,14 +35,23 @@ class ViewController: UIViewController, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
         let viagemAtual = listaViagens[indexPath.row]
+        
+        cell.labelTitulo.text = viagemAtual.titulo
+        cell.labelQuantidadedeDias.text = " \(viagemAtual.quantidadeDeDias)  dias"
+        cell.labelPreco.text = viagemAtual.preco
+        cell.imagemViagem.image = UIImage(named: viagemAtual.caminhoDaImagem) // inserir imagem
+        
+        
         
         cell.textLabel?.text = viagemAtual.titulo
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 175
+    }
 
 
 }

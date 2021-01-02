@@ -22,6 +22,7 @@
 		ABA7E24925A0D0D5000B9DC6 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = ABA7E24825A0D0D4000B9DC6 /* Assets */; };
 		ABA7E24A25A0D0D5000B9DC6 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = ABA7E24825A0D0D4000B9DC6 /* Assets */; };
 		ABA7E24B25A0D0D5000B9DC6 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = ABA7E24825A0D0D4000B9DC6 /* Assets */; };
+		ABA7E26325A0D7BC000B9DC6 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA7E26225A0D7BC000B9DC6 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		ABA7E23925A0CE98000B9DC6 /* Viagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viagem.swift; sourceTree = "<group>"; };
 		ABA7E24125A0D0B7000B9DC6 /* ViagemDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViagemDAO.swift; path = "../../../../../../Downloads/Arquivos Projeto 2/ViagemDAO.swift"; sourceTree = "<group>"; };
 		ABA7E24825A0D0D4000B9DC6 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Assets; path = "../../../../../../Downloads/Arquivos Projeto 2/Assets"; sourceTree = "<group>"; };
+		ABA7E26225A0D7BC000B9DC6 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = ../TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				ABA7E20C25A0BCF3000B9DC6 /* Main.storyboard */,
 				ABA7E24125A0D0B7000B9DC6 /* ViagemDAO.swift */,
 				ABA7E20F25A0BCF6000B9DC6 /* Assets.xcassets */,
+				ABA7E26225A0D7BC000B9DC6 /* TableViewCell.swift */,
 				ABA7E21125A0BCF6000B9DC6 /* LaunchScreen.storyboard */,
 				ABA7E21425A0BCF6000B9DC6 /* Info.plist */,
 				ABA7E24825A0D0D4000B9DC6 /* Assets */,
@@ -277,6 +280,7 @@
 				ABA7E23A25A0CE98000B9DC6 /* Viagem.swift in Sources */,
 				ABA7E24225A0D0B7000B9DC6 /* ViagemDAO.swift in Sources */,
 				ABA7E20B25A0BCF3000B9DC6 /* ViewController.swift in Sources */,
+				ABA7E26325A0D7BC000B9DC6 /* TableViewCell.swift in Sources */,
 				ABA7E20725A0BCF3000B9DC6 /* AppDelegate.swift in Sources */,
 				ABA7E20925A0BCF3000B9DC6 /* SceneDelegate.swift in Sources */,
 			);
