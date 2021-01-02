@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "A5D3006C-A86E-45B0-BDE6-BB2B5EE1BA9F"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DA1D2F2E-F548-4940-8338-4914C66BCC11"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Alura Viagens/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "DA1D2F2E-F548-4940-8338-4914C66BCC11 - 359b11dc953bb3fa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Alura_Viagens.ViewController.listaViagens.getter : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "Alura Viagens"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fandreia/Documents/Xcode/AluraViagens/Alura%20Viagens/Alura%20Viagens/Alura%20Viagens/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "DA1D2F2E-F548-4940-8338-4914C66BCC11 - d7189340894822e6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Alura_Viagens.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Alura_Viagens.ViewController"
+                  moduleName = "Alura Viagens"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fandreia/Documents/Xcode/AluraViagens/Alura%20Viagens/Alura%20Viagens/Alura%20Viagens/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "274">
+               </Location>
+               <Location
+                  uuid = "DA1D2F2E-F548-4940-8338-4914C66BCC11 - 3974c55393a60ed"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Alura_Viagens.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Alura_Viagens.ViewController&gt;"
+                  moduleName = "Alura Viagens"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fandreia/Documents/Xcode/AluraViagens/Alura%20Viagens/Alura%20Viagens/Alura%20Viagens/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "218">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
