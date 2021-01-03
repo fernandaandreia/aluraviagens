@@ -7,7 +7,18 @@
 
 import UIKit
 
-class PacotesViagensViewController: UIViewController, UICollectionViewDataSource {
+class PacotesViagensViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    @IBOutlet weak var collectionPacotes: PacoteViagemCollectionViewCell!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+//        collectionPacotes.delegate = self
+//        collectionPacotes.dataSource  = self
+
+    }
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.listaViagens.count
     }
@@ -28,18 +39,15 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
         
         return celulaPacote
     }
-    
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-//        collectionPacotes.dataSource = self
-       
 
-    }
-    
 
-    @IBOutlet weak var collectionPacotes: PacoteViagemCollectionViewCell!
     
     let listaViagens: Array<Viagem> = ViagemDAO().retornaTodasAsViagens()
 
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return UIDevice.current.userInterfaceIdiom == .phone ? CGSize(width: collectionView.bounds.width/2-20, height: 160) : CGSize(width: collectionView.bounds.width/3-20, height: 250)
+    }
+    
 }
+
