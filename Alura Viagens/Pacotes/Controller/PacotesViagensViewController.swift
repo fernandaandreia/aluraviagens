@@ -7,14 +7,22 @@
 
 import UIKit
 
-class PacotesViagensViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class PacotesViagensViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate, UICollectionViewDelegate{
     
     @IBOutlet weak var collectionPacotes: PacoteViagemCollectionViewCell!
+    @IBOutlet weak var pesquisarViagens: UISearchBar!
+    @IBOutlet weak var labelContadorPacotes: UILabel!
+    
+    let listaComTodasViagens:Array<Viagem> = ViagemDAO().retornaTodasAsViagens()
+    var listaViagens:Array<Viagem> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        collectionPacotes.delegate = self
+        listaViagens = listaComTodasViagens
+       // collectionPacotes.delegate = self
 //        collectionPacotes.dataSource  = self
+        pesquisarViagens.delegate = self
+        self.labelContadorPacotes.text = self.atualizaContadorLabel()
 
     }
     
@@ -43,11 +51,30 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
 
 
     
-    let listaViagens: Array<Viagem> = ViagemDAO().retornaTodasAsViagens()
+//    let listaComTodasViagens: Array<Viagem> = ViagemDAO().retornaTodasAsViagens()
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return UIDevice.current.userInterfaceIdiom == .phone ? CGSize(width: collectionView.bounds.width/2-20, height: 160) : CGSize(width: collectionView.bounds.width/3-20, height: 250)
     }
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
+        listaViagens = listaComTodasViagens
+        if searchText != "" {
+        let filtroListaViagem = NSPredicate(format: "titulo contains %@", searchText)
+        let listaFiltrada:Array<Viagem> = (listaViagens as NSArray).filtered(using: filtroListaViagem) as! Array
+//        collectionPacotes.reloadData()
+    }
+        self.labelContadorPacotes.text = self.atualizaContadorLabel()
+    }
+    
+    func atualizaContadorLabel() -> String {
+        return listaViagens.count == 1 ? "pacote encontrado" : "\(listaViagens.count) pacotes encontrados"
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(identifier: "detalhes") as! DetalhesViagemViewController
+        self.present(controller, animated: true, completion: nil)
+    }
 }
 
