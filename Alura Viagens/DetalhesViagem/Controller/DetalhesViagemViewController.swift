@@ -14,6 +14,7 @@ class DetalhesViagemViewController: UIViewController {
     @IBOutlet weak var labelDescricaoPacoteViagem: UILabel!
     @IBOutlet weak var labelDataViagem: UILabel!
     @IBOutlet weak var labelPrecoPacoteViagem: UILabel!
+    
     @IBAction func botaoVoltar(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -41,17 +42,22 @@ class DetalhesViagemViewController: UIViewController {
             self.scrollPrincipal.contentSize = CGSize(width: self.scrollPrincipal.frame.width, height: self.scrollPrincipal.frame.height + 320)
         }
     
-    }
+        func exibeDataTextField(sender: UIDatePicker){
+            let formatador = DateFormatter()
+            formatador.dateFormat = "dd MM yyy"
+            self.textFieldData.text = formatador.string(from: sender.date)
+        }
+    
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    @IBAction func textEntrouEmFoco(_ sender: UITextField) {
+//        print("teclado entrou em foco")
+        let datePickerView = UIDatePicker()
+        datePickerView.datePickerMode = .date
+        sender.inputView = datePickerView
+        datePickerView.addTarget(self, action: #selector(exibeDataTextField(sender:)), for: .valueChanged)
 }
+   
+    
+    
+    }
