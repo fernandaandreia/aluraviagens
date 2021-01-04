@@ -129,7 +129,7 @@
                         <viewLayoutGuide key="safeArea" id="Dsj-z7-K81"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="procurar" id="UrL-mX-qEz"/>
+                    <tabBarItem key="tabBarItem" title="procurar" image="icon_search.png" id="UrL-mX-qEz"/>
                     <connections>
                         <outlet property="tabelaViagens" destination="AuJ-CZ-4Fw" id="fDL-FU-lM1"/>
                         <outlet property="viewHoteis" destination="F96-NM-QrJ" id="O0C-kf-re0"/>
@@ -148,8 +148,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Uxy-eP-rf7">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="618"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Uxy-eP-rf7">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="574"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pacotes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXa-oo-blf">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="33"/>
@@ -157,7 +157,7 @@
                                         <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="zXf-QU-yPd">
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" text="" translatesAutoresizingMaskIntoConstraints="NO" id="zXf-QU-yPd">
                                         <rect key="frame" x="0.0" y="33" width="390" height="56"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>
@@ -167,8 +167,8 @@
                                         <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5WA-hy-y0x">
-                                        <rect key="frame" x="0.0" y="112.5" width="390" height="505.5"/>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5WA-hy-y0x">
+                                        <rect key="frame" x="0.0" y="112.5" width="390" height="461.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qu7-PB-cz8">
                                             <size key="itemSize" width="135" height="160"/>
@@ -188,33 +188,45 @@
                                                             <rect key="frame" x="0.0" y="8" width="143" height="97"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJo-Cg-K2k">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJo-Cg-K2k">
                                                             <rect key="frame" x="50" y="101" width="46" height="20"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="Yp8-UD-Hcu"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="12"/>
                                                             <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MzX-JO-VqH">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MzX-JO-VqH">
                                                             <rect key="frame" x="50" y="119" width="46" height="20"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="5P4-qj-9uv"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
                                                             <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2l-Ng-CW0">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2l-Ng-CW0">
                                                             <rect key="frame" x="50" y="140" width="46" height="20"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="faq-ba-0oJ"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
                                                             <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sja-mU-MVE">
-                                                            <rect key="frame" x="18" y="75" width="135" height="44"/>
-                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                            <textInputTraits key="textInputTraits"/>
-                                                        </searchBar>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="y2l-Ng-CW0" firstAttribute="leading" secondItem="s2X-rN-mgm" secondAttribute="leading" constant="50" id="Ikk-tW-CCZ"/>
+                                                        <constraint firstItem="y2l-Ng-CW0" firstAttribute="top" secondItem="MzX-JO-VqH" secondAttribute="bottom" constant="1" id="JJC-0k-POS"/>
+                                                        <constraint firstItem="y2l-Ng-CW0" firstAttribute="top" secondItem="jJo-Cg-K2k" secondAttribute="bottom" constant="19" id="MZa-Li-LBG"/>
+                                                        <constraint firstAttribute="trailing" secondItem="MzX-JO-VqH" secondAttribute="trailing" constant="39" id="TTF-Js-TxF"/>
+                                                        <constraint firstAttribute="trailing" secondItem="y2l-Ng-CW0" secondAttribute="trailing" constant="39" id="V7g-1x-Rvn"/>
+                                                        <constraint firstAttribute="trailing" secondItem="jJo-Cg-K2k" secondAttribute="trailing" constant="39" id="rEA-Rm-br1"/>
+                                                        <constraint firstAttribute="bottom" secondItem="y2l-Ng-CW0" secondAttribute="bottom" id="tCd-Oa-Xjn"/>
+                                                        <constraint firstItem="MzX-JO-VqH" firstAttribute="leading" secondItem="s2X-rN-mgm" secondAttribute="leading" constant="50" id="xcR-IW-uHn"/>
+                                                        <constraint firstItem="jJo-Cg-K2k" firstAttribute="leading" secondItem="s2X-rN-mgm" secondAttribute="leading" constant="50" id="yyk-HD-EQ7"/>
+                                                    </constraints>
                                                 </collectionViewCellContentView>
                                                 <size key="customSize" width="135" height="160"/>
                                                 <connections>
@@ -231,20 +243,8 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="g2F-Gc-Qn3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Uxy-eP-rf7" firstAttribute="leading" secondItem="g2F-Gc-Qn3" secondAttribute="leading" constant="15" id="4uD-gd-kgv"/>
-                            <constraint firstItem="Uxy-eP-rf7" firstAttribute="trailing" secondItem="g2F-Gc-Qn3" secondAttribute="trailing" constant="15" id="61l-cz-zx7"/>
-                            <constraint firstItem="Uxy-eP-rf7" firstAttribute="leading" secondItem="g2F-Gc-Qn3" secondAttribute="leading" id="6M4-84-qIJ"/>
-                            <constraint firstItem="Uxy-eP-rf7" firstAttribute="top" secondItem="g2F-Gc-Qn3" secondAttribute="top" id="AAt-eh-Xee"/>
-                            <constraint firstItem="Uxy-eP-rf7" firstAttribute="top" secondItem="g2F-Gc-Qn3" secondAttribute="top" id="bwc-yt-wnR"/>
-                            <constraint firstItem="Uxy-eP-rf7" firstAttribute="top" secondItem="g2F-Gc-Qn3" secondAttribute="top" id="cdf-jO-sX2"/>
-                            <constraint firstItem="Uxy-eP-rf7" firstAttribute="trailing" secondItem="g2F-Gc-Qn3" secondAttribute="trailing" id="krK-0I-1hI"/>
-                            <constraint firstItem="Uxy-eP-rf7" firstAttribute="trailing" secondItem="g2F-Gc-Qn3" secondAttribute="trailing" id="o6y-Al-RUz"/>
-                            <constraint firstItem="Uxy-eP-rf7" firstAttribute="bottom" secondItem="g2F-Gc-Qn3" secondAttribute="bottom" id="uWg-M9-iTc"/>
-                            <constraint firstItem="Uxy-eP-rf7" firstAttribute="leading" secondItem="g2F-Gc-Qn3" secondAttribute="leading" id="zga-R0-cLC"/>
-                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="pacotes" id="fEr-cj-S81"/>
+                    <tabBarItem key="tabBarItem" title="pacotes" image="icon_package.png" id="fEr-cj-S81"/>
                     <connections>
                         <outlet property="collectionPacotes" destination="YRX-JL-6Tu" id="fbd-N2-pBK"/>
                         <outlet property="labelContadorPacotes" destination="UU1-1F-5Yb" id="SR3-wK-7lK"/>
@@ -535,6 +535,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" name="AccentColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="botaoVoltarHome:" destination="Fe6-iI-T4C" eventType="touchUpInside" id="lbG-N6-kIe"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GfQ-Oy-2NL">
                                 <rect key="frame" x="0.0" y="308" width="375" height="5"/>
@@ -582,6 +585,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="botaoVoltarHome" destination="3g2-dN-2rJ" id="4xq-YI-9bT"/>
                         <outlet property="imagemPacoteViagem" destination="r8X-jE-NOJ" id="ghD-FJ-CKS"/>
                         <outlet property="labelDataPacoteViagem" destination="odk-z1-dTf" id="jBI-db-u7C"/>
                         <outlet property="labelDescricaoPacoteViagem" destination="kOy-Eh-D1q" id="dmy-b6-sGU"/>
@@ -594,10 +598,27 @@
             </objects>
             <point key="canvasLocation" x="1858.4000000000001" y="325.18740629685158"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Nf8-Ui-GPa">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="9Es-TS-VuB" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3at-Z6-pc0">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9oh-ji-t79" kind="relationship" relationship="rootViewController" id="4fW-9N-Uvg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Umk-k3-LM1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1618" y="87"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="7oD-1j-QD4">
             <objects>
                 <tabBarController id="9oh-ji-t79" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="aPF-GY-UgR"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wh8-GA-rOO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -618,6 +639,8 @@
         <image name="icon_back.png" width="50" height="50"/>
         <image name="icon_breakfast.png" width="50" height="50"/>
         <image name="icon_hotel.png" width="50" height="50"/>
+        <image name="icon_package.png" width="25" height="25"/>
+        <image name="icon_search.png" width="25" height="25"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

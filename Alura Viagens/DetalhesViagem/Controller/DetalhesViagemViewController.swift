@@ -25,7 +25,8 @@ class DetalhesViagemViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "confirmacaoPagamento") as! ConfirmacaoPagamentoViewController
         controller.pacoteComprado = pacoteSelecionado
-        self.present(controller, animated: true, completion: nil)
+//        self.present(controller, animated: true, completion: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     var pacoteSelecionado:PacoteViagem? = nil
