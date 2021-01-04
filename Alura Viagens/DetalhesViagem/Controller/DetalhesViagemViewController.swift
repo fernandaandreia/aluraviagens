@@ -52,19 +52,20 @@ class DetalhesViagemViewController: UIViewController {
         func exibeDataTextField(sender: UIDatePicker){
             let formatador = DateFormatter()
             formatador.dateFormat = "dd MM yyy"
-            self.textFieldData.text = formatador.string(from: sender.date)
+//            self.textFieldData.text = formatador.string(from: sender.date)
         }
     
     
 
-    @IBAction func textEntrouEmFoco(_ sender: UITextField) {
-//        print("teclado entrou em foco")
-        let datePickerView = UIDatePicker()
-        datePickerView.datePickerMode = .date
-        sender.inputView = datePickerView
-        datePickerView.addTarget(self, action: #selector(exibeDataTextField(sender:)), for: .valueChanged)
-}
+//    @IBAction func textEntrouEmFoco(_ sender: UITextField) {
+////        print("teclado entrou em foco")
+//        let datePickerView = UIDatePicker()
+//        datePickerView.datePickerMode = .date
+//        sender.inputView = datePickerView
+//        datePickerView.addTarget(self, action: #selector(exibeDataTextField(sender:)), for: .valueChanged)
+//}
    
     
     
     }
+}
