@@ -21,6 +21,12 @@ class DetalhesViagemViewController: UIViewController {
     @IBOutlet weak var scrollPrincipal: UIScrollView!
     
     
+    @IBAction func botaoFinalizarCompra(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "confirmacaoPagamento") as! ConfirmacaoPagamentoViewController
+        controller.pacoteComprado = pacoteSelecionado
+        self.present(controller, animated: true, completion: nil)
+    }
     
     var pacoteSelecionado:PacoteViagem? = nil
     
